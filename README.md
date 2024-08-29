@@ -69,7 +69,7 @@ My next goal with this project is to change the domain from my old portfolio web
 
 ## Useful resources
 
-- [Jost Google Font](https://fonts.google.com/selection) - Design called for this font in the project.
+- [Red Hat Google Font](https://fonts.google.com/specimen/Red+Hat+Text) - Design called for this font in the project.
 
 
 ## Author
