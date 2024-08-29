@@ -10,7 +10,7 @@ const ProductCard = ({ title, price, category, picture, pictureDesc }) => {
       <div className="relative">
         <img src={picture} alt={pictureDesc} className="rounded-lg h-50 w-60" />
         <div className="flex flex-col justify-center items-center">
-          <button className="absolute z-50 flex flex-row items-center justify-center py-3 px-6 space-x-2 bg-white rounded-full border border-rose-400">
+          <button className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-white rounded-full border border-rose-400">
             <img src={AddToCart} alt="Add to Cart" />
             <p className="font-bold text-rose-500">Add to Cart</p>
           </button>
