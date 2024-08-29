@@ -8,8 +8,8 @@ const Product = () => {
       <ProductCard
         title="Pistachio Baklava"
         price="$4.00"
-        category={Baklava}
-        picture="BaklavaDesktop"
+        category="Baklava"
+        picture={BaklavaDesktop}
         pictureDesc="A pistachio baklava"
       />
     </div>
