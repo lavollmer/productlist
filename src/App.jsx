@@ -1,6 +1,6 @@
 import "./App.css";
 import Cart from "../src/components/Cart";
-import Product from "./components/ProductCard";
+import Product from "./components/Product";
 import Confirmation from "../src/components/Confirmation";
 
 function App() {
