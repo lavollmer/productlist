@@ -1,11 +1,27 @@
 import "./App.css";
+import Cart from "../src/components/Cart";
+import Product from "../src/components/Product";
+import Confirmation from "../src/components/Confirmation";
 
 function App() {
-
   return (
     <>
-      <div>
-        <h1 className="font-redhat text-red">Hello</h1>
+      <div className="flex flex-row bg-rose-50 p-10 justify-between">
+        <div className="flex flex-col">
+          <div>
+            <h1 className="font-redhat text-black font-bold text-4xl">
+              Desserts
+            </h1>
+          </div>
+          <div>
+            <Product />
+          </div>
+        </div>
+        <div>
+          <div>
+            <Cart />
+          </div>
+        </div>
       </div>
     </>
   );
