@@ -10,10 +10,10 @@ import CakeDesktop from "../assets/image-cake-desktop.jpg";
 import PannaDesktop from "../assets/image-panna-cotta-desktop.jpg";
 import BrownieDesktop from "../assets/image-brownie-desktop.jpg";
 
-const Product = ({ quantity, setQuantity }) => {
+const Product = ({ products, setQuantity }) => {
   return (
     <div className="flex flex-col pt-10 ">
-      <div className="flex md:flex-row flex-col md:space-x-10 md:pb-6">
+      {/* <div className="flex md:flex-row flex-col md:space-x-10 md:pb-6">
         <ProductCard
           title="Waffle with Berries"
           price="$6.50"
@@ -99,6 +99,20 @@ const Product = ({ quantity, setQuantity }) => {
           quantity={quantity}
           setQuantity={setQuantity}
         />
+      </div> */}
+      <div className="flex md:flex-row flex-col md:space-x-10 md:pb-6">
+        {products.map((product) => (
+          <ProductCard
+            key={product.title}
+            title={product.title}
+            price={product.price}
+            category={product.category}
+            picture={product.picture}
+            pictureDesc={product.pictureDesc}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
+        ))}
       </div>
     </div>
   );
