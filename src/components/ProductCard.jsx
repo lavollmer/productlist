@@ -2,17 +2,9 @@ import React from "react";
 import AddToCart from "../assets/icon-add-to-cart.svg";
 import IncreaseIcon from "../assets/icon-increment-quantity.svg";
 import DecreaseIcon from "../assets/icon-decrement-quantity.svg";
-import CartIcon from "../assets/illustration-empty-cart.svg";
 import { useState } from "react";
 
-const ProductCard = ({
-  title,
-  price,
-  category,
-  picture,
-  pictureDesc,
-  quantity,
-}) => {
+const ProductCard = ({ title, price, category, picture, pictureDesc }) => {
   //useState to hold the dynamic number of how many items are in the cart
   const [quantity, setQuantity] = useState(0);
 
@@ -38,35 +30,31 @@ const ProductCard = ({
       <div className="relative">
         <img src={picture} alt={pictureDesc} className="rounded-lg h-50 w-60" />
         <div className="flex flex-col justify-center items-center">
-          <button
-            onClick={handleQuantity}
-            className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-white rounded-full border border-rose-400"
-          >
-            <img src={AddToCart} alt="Add to Cart" />
-            <p className="font-bold text-rose-500">Add to Cart</p>
-          </button>
+          {quantity > 0 ? (
+            <div className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-red rounded-full text-white">
+              <button onClick={handleDecrease} className="px-2">
+                <img src={DecreaseIcon} alt="Decrease Quantity" />
+              </button>
+              <p className="font-bold">{quantity}</p>
+              <button onClick={handleIncrease} className="px-2">
+                <img src={IncreaseIcon} alt="Increase Quantity" />
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={handleQuantity}
+              className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-white rounded-full border border-rose-400"
+            >
+              <img src={AddToCart} alt="Add to Cart" />
+              <p className="font-bold text-rose-500">Add to Cart</p>
+            </button>
+          )}
         </div>
-        {/* if quantity is greater than 0, show the quantity */}
-        {quantity > 0 && (
-          <div className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-white rounded-full border border-rose-400">
-            <img
-              onClick={handleIncrease}
-              src={DecreaseIcon}
-              alt="Decrease Quantity"
-            />
-            <p className="font-bold text-rose-500">{quantity}</p>
-            <img
-              onClick={handleDecrease}
-              src={IncreaseIcon}
-              alt="Increase Quantity"
-            />
-          </div>
-        )}
-      </div>
-      <div className="flex flex-col justify-start bg-rose-50 pt-10">
-        <p className="text-sm text-rose-500">{category}</p>
-        <h1 className="font-bold text-md">{title}</h1>
-        <p className="text-red font-bold">{price}</p>
+        <div className="flex flex-col justify-start bg-rose-50 pt-10">
+          <p className="text-sm text-rose-500">{category}</p>
+          <h1 className="font-bold text-md">{title}</h1>
+          <p className="text-red font-bold">{price}</p>
+        </div>
       </div>
     </div>
   );
