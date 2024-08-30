@@ -25,6 +25,11 @@ function App() {
             <Cart quantity={quantity} />
           </div>
         </div>
+        <div>
+          <div>
+            <Confirmation quantity={quantity} />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -10,7 +10,7 @@ import CakeDesktop from "../assets/image-cake-desktop.jpg";
 import PannaDesktop from "../assets/image-panna-cotta-desktop.jpg";
 import BrownieDesktop from "../assets/image-brownie-desktop.jpg";
 
-const Product = () => {
+const Product = ({ quantity, setQuantity }) => {
   return (
     <div className="flex flex-col pt-10 ">
       <div className="flex md:flex-row flex-col md:space-x-10 md:pb-6">
@@ -20,6 +20,8 @@ const Product = () => {
           category="Waffle"
           picture={WaffleDesktop}
           pictureDesc="A waffle with berries"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
         <ProductCard
           title="Vanilla Bean Crème Brûlée"
@@ -27,6 +29,8 @@ const Product = () => {
           category="Crème Brûlée"
           picture={CremeDesktop}
           pictureDesc="A Crème Brûlée"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
         <ProductCard
           title="Macaron Mix of Five"
@@ -34,6 +38,8 @@ const Product = () => {
           category="Macaron"
           picture={MacaronDesktop}
           pictureDesc="A Macaron Mix of Five"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
       </div>
       <div className="flex md:flex-row flex-col md:space-x-10  md:pb-6">
@@ -43,6 +49,8 @@ const Product = () => {
           category="Tiramisu"
           picture={TiramisuDesktop}
           pictureDesc="A Classic Tiramisu"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
         <ProductCard
           title="Pistachio Baklava"
@@ -50,6 +58,8 @@ const Product = () => {
           category="Baklava"
           picture={BaklavaDesktop}
           pictureDesc="A pistachio baklava"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
         <ProductCard
           title="Lemon Meringue Pie"
@@ -57,6 +67,8 @@ const Product = () => {
           category="Pie"
           picture={PieDesktop}
           pictureDesc="A  Lemon Meringue Pie"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
       </div>
       <div className="flex md:flex-row flex-col md:space-x-10  md:pb-6">
@@ -66,6 +78,8 @@ const Product = () => {
           category="Cake"
           picture={CakeDesktop}
           pictureDesc="A red velvet cake"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
         <ProductCard
           title="Salted Caramel Brownie"
@@ -73,6 +87,8 @@ const Product = () => {
           category="Brownie"
           picture={BrownieDesktop}
           pictureDesc="A Brownie"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
         <ProductCard
           title="Vanilla Panna Cotta"
@@ -80,6 +96,8 @@ const Product = () => {
           category="Panna Cotta"
           picture={PannaDesktop}
           pictureDesc="A Vanilla Panna Cotta"
+          quantity={quantity}
+          setQuantity={setQuantity}
         />
       </div>
     </div>

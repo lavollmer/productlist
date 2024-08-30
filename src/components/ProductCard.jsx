@@ -11,11 +11,8 @@ const ProductCard = ({
   picture,
   pictureDesc,
   quantity,
-  setQuantity
+  setQuantity,
 }) => {
-  //useState to hold the dynamic number of how many items are in the cart
-  const [quantity, setQuantity] = useState(0);
-
   //if clicks the add to cart button for the first time --> always increases quantity by one
   const handleQuantity = () => {
     setQuantity(quantity + 1);
