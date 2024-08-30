@@ -109,8 +109,8 @@ const Product = ({ products, setQuantity }) => {
             category={product.category}
             picture={product.picture}
             pictureDesc={product.pictureDesc}
-            quantity={quantity}
-            setQuantity={setQuantity}
+            quantity={product.quantity} // Pass quantity prop
+            setQuantity={(quantity) => setQuantity(product.id, quantity)}
           />
         ))}
       </div>
