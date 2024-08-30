@@ -33,7 +33,7 @@ const ProductCard = ({ title, price, category, picture, pictureDesc }) => {
           <img
             src={picture}
             alt={pictureDesc}
-            className="rounded-lg h-50 w-60"
+            className="rounded-lg h-50 w-60 border-2 border-red"
           />
           <div className="flex flex-col justify-center items-center">
             <div className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-red rounded-full text-white">
