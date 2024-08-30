@@ -19,7 +19,7 @@ const ProductCard = ({ title, price, category, picture, pictureDesc }) => {
       <div className="flex flex-col justify-start bg-rose-50 pt-10">
         <p className="text-sm text-rose-500">{category}</p>
         <h1 className="font-bold text-md">{title}</h1>
-        <p className="text-rose-800 font-bold">{price}</p>
+        <p className="text-red font-bold">{price}</p>
       </div>
     </div>
   );
