@@ -4,7 +4,15 @@ import IncreaseIcon from "../assets/icon-increment-quantity.svg";
 import DecreaseIcon from "../assets/icon-decrement-quantity.svg";
 import { useState } from "react";
 
-const ProductCard = ({ title, price, category, picture, pictureDesc }) => {
+const ProductCard = ({
+  title,
+  price,
+  category,
+  picture,
+  pictureDesc,
+  quantity,
+  setQuantity
+}) => {
   //useState to hold the dynamic number of how many items are in the cart
   const [quantity, setQuantity] = useState(0);
 

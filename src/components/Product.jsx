@@ -12,8 +12,8 @@ import BrownieDesktop from "../assets/image-brownie-desktop.jpg";
 
 const Product = () => {
   return (
-    <div className="flex flex-col pt-10">
-      <div className="flex md:flex-row flex-col md:space-x-10">
+    <div className="flex flex-col pt-10 ">
+      <div className="flex md:flex-row flex-col md:space-x-10 md:pb-6">
         <ProductCard
           title="Waffle with Berries"
           price="$6.50"
@@ -36,7 +36,7 @@ const Product = () => {
           pictureDesc="A Macaron Mix of Five"
         />
       </div>
-      <div className="flex md:flex-row flex-col md:space-x-10">
+      <div className="flex md:flex-row flex-col md:space-x-10  md:pb-6">
         <ProductCard
           title="Classic Tiramisu"
           price="$5.50"
@@ -59,7 +59,7 @@ const Product = () => {
           pictureDesc="A  Lemon Meringue Pie"
         />
       </div>
-      <div className="flex md:flex-row flex-col md:space-x-10">
+      <div className="flex md:flex-row flex-col md:space-x-10  md:pb-6">
         <ProductCard
           title="Red Velvet Cake"
           price="$4.00"
