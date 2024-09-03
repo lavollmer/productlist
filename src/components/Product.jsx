@@ -13,7 +13,7 @@ const Product = ({ products, setQuantity }) => {
             category={product.category}
             picture={product.picture}
             pictureDesc={product.pictureDesc}
-            quantity={product.quantity} // Pass quantity prop
+            quantity={product.quantity}
             setQuantity={(quantity) => setQuantity(product.id, quantity)}
           />
         ))}

@@ -14,14 +14,13 @@ import PannaDesktop from "./assets/image-panna-cotta-desktop.jpg";
 import BrownieDesktop from "./assets/image-brownie-desktop.jpg";
 
 function App() {
-
   const [products, setProducts] = useState([
     {
       id: 1,
       title: "Waffle with Berries",
       price: "$6.50",
       category: "Waffle",
-      picture: { WaffleDesktop },
+      picture: WaffleDesktop ,
       pictureDesc: "A waffle with berries",
       quantity: 0,
     },
@@ -30,7 +29,7 @@ function App() {
       title: "Vanilla Bean Crème Brûlée",
       price: "$7.00",
       category: "Crème Brûlée",
-      picture: { CremeDesktop },
+      picture:  CremeDesktop ,
       pictureDesc: "A Crème Brûlée",
       quantity: 0,
     },
@@ -39,7 +38,7 @@ function App() {
       title: "Macaron Mix of Five",
       price: "$4.00",
       category: "Macaron",
-      picture: { MacaronDesktop },
+      picture:  MacaronDesktop ,
       pictureDesc: "A Macaron Mix of Five",
       quantity: 0,
     },
@@ -48,7 +47,7 @@ function App() {
       title: "Classic Tiramisu",
       price: "$5.50",
       category: "Tiramisu",
-      picture: { TiramisuDesktop },
+      picture: TiramisuDesktop ,
       pictureDesc: "A Classic Tiramisu",
       quantity: 0,
     },
@@ -57,7 +56,7 @@ function App() {
       title: "Pistachio Baklava",
       price: "$4.00",
       category: "Baklava",
-      picture: { BaklavaDesktop },
+      picture:  BaklavaDesktop ,
       pictureDesc: "A pistachio baklava",
       quantity: 0,
     },
@@ -66,7 +65,7 @@ function App() {
       title: "Lemon Meringue Pie",
       price: "$4.00",
       category: "Pie",
-      picture: { PieDesktop },
+      picture:  PieDesktop ,
       pictureDesc: "A  Lemon Meringue Pie",
       quantity: 0,
     },
@@ -75,7 +74,7 @@ function App() {
       title: "Red Velvet Cake",
       price: "$4.00",
       category: "Cake",
-      picture: { CakeDesktop },
+      picture: CakeDesktop ,
       pictureDesc: "A Cake",
       quantity: 0,
     },
@@ -84,7 +83,7 @@ function App() {
       title: "Salted Caramel Brownie",
       price: "$4.50",
       category: "Brownie",
-      picture: { BrownieDesktop },
+      picture:  BrownieDesktop ,
       pictureDesc: "A Salted Caramel Brownie",
       quantity: 0,
     },
@@ -93,7 +92,7 @@ function App() {
       title: "Vanilla Panna Cotta",
       price: "$4.00",
       category: "Panna cotta",
-      picture: { PannaDesktop },
+      picture:  PannaDesktop ,
       pictureDesc: "A Vanilla Panna Cotta",
       quantity: 0,
     },
@@ -109,7 +108,7 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col bg-rose-50 h-full w-full p-10 justify-evenly">
+      <div className="flex flex-col bg-rose-50 p-10 justify-evenly">
         <div className="flex flex-col">
           <div>
             <h1 className="font-redhat text-black font-bold text-4xl">

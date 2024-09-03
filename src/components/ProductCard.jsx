@@ -2,7 +2,6 @@ import React from "react";
 import AddToCart from "../assets/icon-add-to-cart.svg";
 import IncreaseIcon from "../assets/icon-increment-quantity.svg";
 import DecreaseIcon from "../assets/icon-decrement-quantity.svg";
-import { useState } from "react";
 
 const ProductCard = ({
   title,
@@ -40,6 +39,7 @@ const ProductCard = ({
             alt={pictureDesc}
             className="rounded-lg h-50 w-60 border-2 border-red"
           />
+          {/* add to cart icons with plus and minus */}
           <div className="flex flex-col justify-center items-center">
             <div className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-red rounded-full text-white">
               <button onClick={handleDecrease} className="px-2">
