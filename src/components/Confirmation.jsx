@@ -9,9 +9,9 @@ const Confirmation = () => {
         </h1>
         <h2>We hope you enjoy your food!</h2>
       </div>
-      <div className="flex flex-col justify-center items-center bg-rose-400">
-        <button className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-white rounded-full border border-rose-400">
-          <p className="font-bold text-rose-50">Start New Order</p>
+      <div className="flex flex-col justify-center items-center ">
+        <button className="absolute z-50 bg-red flex flex-row items-center justify-center py-2 px-6 space-x-2 rounded-full">
+          <p className="font-bold text-rose-50 bg-red">Start New Order</p>
         </button>
       </div>
     </div>
