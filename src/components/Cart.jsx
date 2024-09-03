@@ -16,7 +16,7 @@ const Cart = ({ products, setQuantity, quantity }) => {
         <p>Your added items will appear here</p>
       </div>
       <div className="flex flex-col pt-10 ">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
           {products.map((product) => (
             <CartCard
               key={product.title}
