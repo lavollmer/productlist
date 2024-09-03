@@ -126,7 +126,7 @@ function App() {
         </div>
         <div>
           <div>
-            <Confirmation products={products} />
+            <Confirmation products={products} setQuantity={setQuantity} />
           </div>
         </div>
       </div>
