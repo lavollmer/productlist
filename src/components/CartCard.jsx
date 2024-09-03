@@ -7,6 +7,9 @@ const CartCard = ({ title, price, quantity }) => {
     return null;
   }
 
+  console.log("Price:", price);
+  console.log("Quantity:", quantity);
+  
   const total = `$${(parseFloat(price) * quantity).toFixed(2)}`;
 
 

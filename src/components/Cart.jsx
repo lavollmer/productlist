@@ -2,10 +2,12 @@ import React from "react";
 import emptyCart from "../assets/illustration-empty-cart.svg";
 import CartCard from "./CartCard";
 
-const Cart = ({ products, setQuantity, quantity }) => {
+const Cart = ({ products, setQuantity }) => {
   const totalQuantity = products.reduce((acc, product) => {
     return acc + product.quantity;
   }, 0);
+
+  const totalPrice = products.reduce((acc, product) => acc + product.price * product.quantity, 0).toFixed(2);
 
   return (
     <div className="bg-white rounded-lg p-10">
@@ -33,10 +35,9 @@ const Cart = ({ products, setQuantity, quantity }) => {
               />
             ))}
           </div>
-
           <div className="flex flex-row justify-between items-center">
             <p className="text-rose-300 text-md font-bold">Order Total</p>
-            <p className="font-bold text-black text-lg">X</p>
+            <p className="font-bold text-black text-lg">{totalPrice}</p>
           </div>
         </div>
       )}

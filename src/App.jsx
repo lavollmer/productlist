@@ -99,8 +99,8 @@ function App() {
   ]);
 
   const setQuantity = (id, quantity) => {
-    setProducts(
-      products.map((product) =>
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
         product.id === id ? { ...product, quantity } : product
       )
     );
@@ -121,7 +121,7 @@ function App() {
         </div>
         <div className="pt-10">
           <div>
-            <Cart products={products} />
+            <Cart products={products} setQuantity={setQuantity} />
           </div>
         </div>
         <div>
