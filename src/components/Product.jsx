@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 const Product = ({ products, setQuantity }) => {
   return (
     <div className="flex flex-col pt-10 ">
-      <div className="flex md:flex-row flex-col md:space-x-10 md:pb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map((product) => (
           <ProductCard
             key={product.title}
