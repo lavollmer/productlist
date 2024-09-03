@@ -1,7 +1,7 @@
 import React from "react";
 import emptyCart from "../assets/illustration-empty-cart.svg";
 import CloseIcon from "../assets/icon-remove-item.svg";
-import CartCard from "./ProductCard";
+import CartCard from "./CartCard";
 
 const Cart = ({ products, setQuantity, quantity }) => {
   return (
@@ -21,9 +21,6 @@ const Cart = ({ products, setQuantity, quantity }) => {
               key={product.title}
               title={product.title}
               price={product.price}
-              category={product.category}
-              picture={product.picture}
-              pictureDesc={product.pictureDesc}
               quantity={product.quantity}
               setQuantity={(quantity) => setQuantity(product.id, quantity)}
             />
