@@ -1,7 +1,7 @@
 import "./App.css";
 import Cart from "../src/components/Cart";
 import Product from "./components/Product";
-import Confirmation from "../src/components/Confirmation";
+import Confirmation from "./components/Confirmation";
 import { useState } from "react";
 import BaklavaDesktop from "./assets/image-baklava-desktop.jpg";
 import WaffleDesktop from "./assets/image-waffle-desktop.jpg";
