@@ -9,6 +9,7 @@ const CartCard = ({ title, price, quantity }) => {
 
   const total = `$${(parseFloat(price) * quantity).toFixed(2)}`;
 
+
   return (
     <div className="flex flex-col font-redhat bg-white p-2">
       <div className="flex flex-col justify-start bg-white">
@@ -25,6 +26,7 @@ const CartCard = ({ title, price, quantity }) => {
           <p className="text-rose-300 text-md">{price}</p>
           <p className="text-red font-bold">{total}</p>
         </div>
+        <hr className="border-rose-50 my-5" />
       </div>
     </div>
   );

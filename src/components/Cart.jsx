@@ -14,26 +14,31 @@ const Cart = ({ products, setQuantity, quantity }) => {
         <h1 className="font-redhat text-red font-bold text-xl">
           ({totalQuantity})
         </h1>
-        </div>
+      </div>
       {totalQuantity === 0 ? (
         <div>
           <img src={emptyCart} alt="Empty Cart" className="w-40 h-40" />
           <p>Your added items will appear here</p>
         </div>
       ) : (
-      <div className="flex flex-col pt-10 ">
-        <div>
-          {products.map((product) => (
-            <CartCard
-              key={product.title}
-              title={product.title}
-              price={product.price}
-              quantity={product.quantity}
-              setQuantity={(quantity) => setQuantity(product.id, quantity)}
-            />
-          ))}
+        <div className="flex flex-col pt-10 ">
+          <div>
+            {products.map((product) => (
+              <CartCard
+                key={product.title}
+                title={product.title}
+                price={product.price}
+                quantity={product.quantity}
+                setQuantity={(quantity) => setQuantity(product.id, quantity)}
+              />
+            ))}
+          </div>
+
+          <div className="flex flex-row justify-between items-center">
+            <p className="text-rose-300 text-md font-bold">Order Total</p>
+            <p className="font-bold text-black text-lg">X</p>
+          </div>
         </div>
-      </div>
       )}
     </div>
   );
