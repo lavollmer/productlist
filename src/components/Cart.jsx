@@ -1,6 +1,5 @@
 import React from "react";
 import emptyCart from "../assets/illustration-empty-cart.svg";
-import CloseIcon from "../assets/icon-remove-item.svg";
 import CartCard from "./CartCard";
 
 const Cart = ({ products, setQuantity, quantity }) => {
