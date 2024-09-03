@@ -7,11 +7,12 @@ const CartCard = ({ title, price, quantity, setQuantity }) => {
   return (
     <div className="flex flex-col font-redhat bg-rose-50">
       <div className="flex flex-col justify-start bg-rose-50 pt-10">
-      {quantity > 0 ? (
-        <p className="text-red font-bold">{quantity}x</p>
-      ):()
-        <h1 className="font-bold text-md">{title}</h1>
-        <p className="text-red font-bold">{price}</p>
+        {quantity > 0 ? (
+          <p className="text-red font-bold">{quantity}x</p>
+        ) : (
+          <h1 className="font-bold text-md">{title}</h1>
+        )}
+        <p className="text-rose-300 text-md">{price}</p>
 
         <p className="text-red font-bold">{setQuantity}</p>
       </div>
