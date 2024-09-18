@@ -30,17 +30,17 @@ const ProductCard = ({
   };
 
   return (
-    <div className="flex flex-col font-redhat bg-rose-50">
+    <div className="relative flex flex-col font-redhat bg-rose-50">
       {/* if quantity is above 0 then display the below otherwise display the other section with add to cart */}
       {quantity > 0 ? (
-        <div>
+        <div className="relative">
           <img
             src={picture}
             alt={pictureDesc}
             className="rounded-lg h-50 w-60 border-2 border-red"
           />
           {/* add to cart icons with plus and minus */}
-          <div className="relative flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <div className="absolute z-50 flex flex-row items-center justify-center py-2 px-6 space-x-2 bg-red rounded-full text-white">
               <button onClick={handleDecrease} className="px-2">
                 <img src={DecreaseIcon} alt="Decrease Quantity" />

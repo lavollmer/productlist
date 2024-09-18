@@ -9,8 +9,9 @@ const CartCard = ({ title, price, quantity }) => {
 
   console.log("Price:", price);
   console.log("Quantity:", quantity);
-  
-  const total = `$${(parseFloat(price) * quantity).toFixed(2)}`;
+
+  const parsedPrice = parseFloat(price);
+  const total = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
 
 
   return (
