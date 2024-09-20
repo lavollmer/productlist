@@ -30,10 +30,10 @@ const ProductCard = ({
   };
 
   return (
-    <div className="relative flex flex-col font-redhat bg-rose-50">
+    <div className="relative flex flex-col items-center justify-center font-redhat bg-rose-50">
       {/* if quantity is above 0 then display the below otherwise display the other section with add to cart */}
       {quantity > 0 ? (
-        <div className="relative">
+        <div className="relative h-50 w-60 ">
           <img
             src={picture}
             alt={pictureDesc}
