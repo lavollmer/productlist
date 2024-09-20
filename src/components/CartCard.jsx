@@ -2,7 +2,7 @@ import React from "react";
 import CloseIcon from "../assets/icon-remove-item.svg";
 
 const CartCard = ({ title, price, quantity }) => {
-  //component returns nothing is quantity is less than or equal to 0
+  //component returns nothing if quantity is less than or equal to 0
   if (quantity <= 0) {
     return null;
   }
@@ -10,9 +10,12 @@ const CartCard = ({ title, price, quantity }) => {
   console.log("Price:", price);
   console.log("Quantity:", quantity);
 
+  // Ensure price is a valid number
   const parsedPrice = parseFloat(price);
-  const total = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
+  console.log("Parsed Price:", parsedPrice);
 
+  const total = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
+  console.log("Total:", total);
 
   return (
     <div className="flex flex-col font-redhat bg-white p-2">
@@ -27,7 +30,7 @@ const CartCard = ({ title, price, quantity }) => {
         </div>
         <div className="flex flex-row space-x-2">
           <p className="text-red font-bold">{quantity}x</p>
-          <p className="text-rose-300 text-md">{price}</p>
+          <p className="text-rose-300 text-md">${isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}</p>
           <p className="text-red font-bold">{total}</p>
         </div>
         <hr className="border-rose-50 my-5" />

@@ -8,7 +8,10 @@ const Cart = ({ products, setQuantity }) => {
   }, 0);
 
   const totalPrice = products.reduce((acc, product) => {
-    const parsedPrice = parseFloat(product.price);
+    console.log(`Product Price (before parsing): ${product.price}`);
+    const priceWithoutDollarSign = product.price.replace('$', '');
+    const parsedPrice = parseFloat(priceWithoutDollarSign);
+    console.log(`Parsed Price: ${parsedPrice}`);
     if (isNaN(parsedPrice)) {
       console.error(`Invalid price for product ${product.title}: ${product.price}`);
       return acc;
