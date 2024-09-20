@@ -10,8 +10,9 @@ const CartCard = ({ title, price, quantity }) => {
   console.log("Price:", price);
   console.log("Quantity:", quantity);
 
-  // Ensure price is a valid number
-  const parsedPrice = parseFloat(price);
+  // Remove dollar sign and ensure price is a valid number
+  const priceWithoutDollarSign = price.replace('$', '');
+  const parsedPrice = parseFloat(priceWithoutDollarSign);
   console.log("Parsed Price:", parsedPrice);
 
   const total = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
