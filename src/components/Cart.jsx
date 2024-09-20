@@ -7,7 +7,14 @@ const Cart = ({ products, setQuantity }) => {
     return acc + product.quantity;
   }, 0);
 
-  const totalPrice = products.reduce((acc, product) => acc + product.price * product.quantity, 0).toFixed(2);
+  const totalPrice = products.reduce((acc, product) => {
+    const parsedPrice = parseFloat(product.price);
+    if (isNaN(parsedPrice)) {
+      console.error(`Invalid price for product ${product.title}: ${product.price}`);
+      return acc;
+    }
+    return acc + parsedPrice * product.quantity;
+  }, 0).toFixed(2);
 
   return (
     <div className="bg-white rounded-lg p-10">
