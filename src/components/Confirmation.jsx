@@ -7,7 +7,7 @@ const Confirmation = ({ isOpen, onClose, products, confirmOrder }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="flex flex-col bg-white rounded-lg p-10 space-y-10">
+      <div className="flex flex-col bg-white rounded-lg p-10 space-y-10 w-1/2 max-2-xl">
         <div className="flex flex-col space-y-4">
           <img src={GreenIcon} alt="green checkmark" className="h-10 w-10" />
           <div>
