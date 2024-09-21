@@ -3,7 +3,7 @@ import emptyCart from "../assets/illustration-empty-cart.svg";
 import CartCard from "./CartCard";
 import CarbonNeutral from "../assets/icon-carbon-neutral.svg";
 
-const Cart = ({ products, setQuantity, removeItem }) => {
+const Cart = ({ products, setQuantity, removeItem, confirmOrder }) => {
   const totalQuantity = products.reduce((acc, product) => {
     return acc + product.quantity;
   }, 0);
@@ -38,9 +38,9 @@ const Cart = ({ products, setQuantity, removeItem }) => {
       ) : (
         <div className="flex flex-col pt-10 ">
           <div>
-            {products.map((product) => (
+          {products.map((product, index) => (
               <CartCard
-                key={product.id}
+                key={`${product.id}-${index}`}
                 title={product.title}
                 price={product.price}
                 quantity={product.quantity}

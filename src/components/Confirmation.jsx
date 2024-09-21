@@ -1,7 +1,7 @@
 import React from "react";
 import GreenIcon from "../assets/icon-order-confirmed.svg";
 
-const Confirmation = ({ isOpen, onClose, products }) => {
+const Confirmation = ({ isOpen, onClose, products, confirmOrder }) => {
   if (!isOpen) return null;
 
   return (
@@ -16,14 +16,17 @@ const Confirmation = ({ isOpen, onClose, products }) => {
         </h2>
       </div>
       <ul>
-        {products.map((product) => (
-          <li key={product.id} className="mb-2">
+        {products.map((product, index) => (
+          <li key={`${product.id}-${index}`} className="mb-2">
             {product.quantity}x {product.title} - {product.price}
           </li>
         ))}
       </ul>
       <div>
-        <button className="bg-red flex flex-row items-center justify-center py-2 px-4 rounded-full" onClick={onClose}>
+        <button
+          className="bg-red flex flex-row items-center justify-center py-2 px-4 rounded-full"
+          onClick={onClose}
+        >
           <p className="font-bold text-rose-50 bg-red">Start New Order</p>
         </button>
       </div>

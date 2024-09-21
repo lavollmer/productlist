@@ -101,11 +101,9 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const setQuantity = (id, quantity) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === id ? { ...product, quantity } : product
-      )
-    );
+    setProducts(products.map(product => 
+      product.id === id ? { ...product, quantity } : product
+    ));
   };
 
   const removeItem = (id) => {
@@ -140,17 +138,16 @@ function App() {
                 products={products}
                 setQuantity={setQuantity}
                 removeItem={removeItem}
+                confirmOrder={confirmOrder}
               />
             </div>
           </div>
         </div>
       </div>
       <Confirmation
-        products={products}
-        setQuantity={setQuantity}
-        removeItem={removeItem}
         isOpen={isModalOpen}
         onClose={closeModal}
+        products={products}
       />
     </>
   );
