@@ -2,16 +2,14 @@ import React from "react";
 import emptyCart from "../assets/illustration-empty-cart.svg";
 import CartCard from "./CartCard";
 
-const Cart = ({ products, setQuantity }) => {
+const Cart = ({ products, setQuantity, removeItem }) => {
   const totalQuantity = products.reduce((acc, product) => {
     return acc + product.quantity;
   }, 0);
 
   const totalPrice = products.reduce((acc, product) => {
-    console.log(`Product Price (before parsing): ${product.price}`);
     const priceWithoutDollarSign = product.price.replace('$', '');
     const parsedPrice = parseFloat(priceWithoutDollarSign);
-    console.log(`Parsed Price: ${parsedPrice}`);
     if (isNaN(parsedPrice)) {
       console.error(`Invalid price for product ${product.title}: ${product.price}`);
       return acc;
@@ -42,6 +40,7 @@ const Cart = ({ products, setQuantity }) => {
                 price={product.price}
                 quantity={product.quantity}
                 setQuantity={(quantity) => setQuantity(product.id, quantity)}
+                removeItem={() => removeItem(product.id)}
               />
             ))}
           </div>

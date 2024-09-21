@@ -1,7 +1,7 @@
 import React from "react";
 import CloseIcon from "../assets/icon-remove-item.svg";
 
-const CartCard = ({ title, price, quantity }) => {
+const CartCard = ({ title, price, quantity,removeItem }) => {
   //component returns nothing if quantity is less than or equal to 0
   if (quantity <= 0) {
     return null;
@@ -25,6 +25,7 @@ const CartCard = ({ title, price, quantity }) => {
           <h1 className="font-bold text-md">{title}</h1>
           <button
             className="flex items-center justify-center h-4 w-4 rounded-full border border-rose-300"
+            onClick={removeItem}
           >
             <img src={CloseIcon} alt="Close Icon" className="h-2 w-2" />
           </button>
