@@ -18,20 +18,21 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     ? "Invalid price"
     : `$${(parsedPrice * quantity).toFixed(2)}`;
   console.log("Total:", total);
+
   return (
-    <div className="flex flex-col font-redhat bg-rose-50 p-2">
+    <div className="flex flex-col font-redhat bg-rose-50 p-10">
       <div className="flex flex-col justify-start">
         <div className="flex flex-row justify-between">
           <h1 className="font-bold text-md">{title}</h1>
         </div>
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-row space-x-4 text-sm">
           <p className="text-red font-bold">{quantity}x</p>
-          <p className="text-rose-300 text-md">
-            ${isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}
+          <p className="text-rose-300">
+            @ ${isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}
           </p>
           <p className="text-red font-bold">{total}</p>
         </div>
-        <hr className="border-rose-50 my-5" />
+        <hr className="border-rose-100 my-5" />
       </div>
     </div>
   );
