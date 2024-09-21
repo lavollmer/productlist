@@ -106,6 +106,10 @@ function App() {
     );
   };
 
+  const removeItem = (id) => {
+    setProducts(products.filter(product => product.id !== id));
+  };
+
   return (
     <>
       <div className="flex flex-col bg-rose-50 p-10 justify-evenly">
@@ -121,12 +125,12 @@ function App() {
         </div>
         <div className="pt-10">
           <div>
-            <Cart products={products} setQuantity={setQuantity} />
+            <Cart products={products} setQuantity={setQuantity} removeItem={removeItem} />
           </div>
         </div>
         <div>
           <div>
-            <Confirmation products={products} setQuantity={setQuantity} />
+            <Confirmation products={products} setQuantity={setQuantity} removeItem={removeItem} />
           </div>
         </div>
       </div>

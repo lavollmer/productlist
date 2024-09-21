@@ -1,7 +1,7 @@
 import React from "react";
 import CloseIcon from "../assets/icon-remove-item.svg";
 
-const CartCard = ({ title, price, quantity,removeItem }) => {
+const CartCard = ({ title, price, quantity, removeItem }) => {
   //component returns nothing if quantity is less than or equal to 0
   if (quantity <= 0) {
     return null;

@@ -33,9 +33,9 @@ const Cart = ({ products, setQuantity, removeItem }) => {
       ) : (
         <div className="flex flex-col pt-10 ">
           <div>
-            {products.map((product) => (
+          {products.map((product) => (
               <CartCard
-                key={product.title}
+                key={product.id}
                 title={product.title}
                 price={product.price}
                 quantity={product.quantity}
