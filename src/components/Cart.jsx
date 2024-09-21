@@ -62,7 +62,7 @@ const Cart = ({ products, setQuantity, removeItem, confirmOrder }) => {
             </div>
           </div>
           <div className="flex flex-row justify-center items-center mt-4">
-            <button className="bg-red flex flex-row items-center justify-center w-full py-4 rounded-full">
+            <button className="bg-red flex flex-row items-center justify-center w-full py-4 rounded-full" onClick={confirmOrder}>
               <p className="font-bold text-rose-50 bg-red">Confirm Order</p>
             </button>
           </div>

@@ -144,11 +144,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Confirmation
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        products={products}
-      />
+      {isModalOpen && <Confirmation isOpen={isModalOpen} onClose={closeModal} products={products} />}
     </>
   );
 }
