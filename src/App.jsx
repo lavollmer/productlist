@@ -20,7 +20,7 @@ function App() {
       title: "Waffle with Berries",
       price: "$6.50",
       category: "Waffle",
-      picture: WaffleDesktop ,
+      picture: WaffleDesktop,
       pictureDesc: "A waffle with berries",
       quantity: 0,
     },
@@ -29,7 +29,7 @@ function App() {
       title: "Vanilla Bean Crème Brûlée",
       price: "$7.00",
       category: "Crème Brûlée",
-      picture:  CremeDesktop ,
+      picture: CremeDesktop,
       pictureDesc: "A Crème Brûlée",
       quantity: 0,
     },
@@ -38,7 +38,7 @@ function App() {
       title: "Macaron Mix of Five",
       price: "$4.00",
       category: "Macaron",
-      picture:  MacaronDesktop ,
+      picture: MacaronDesktop,
       pictureDesc: "A Macaron Mix of Five",
       quantity: 0,
     },
@@ -47,7 +47,7 @@ function App() {
       title: "Classic Tiramisu",
       price: "$5.50",
       category: "Tiramisu",
-      picture: TiramisuDesktop ,
+      picture: TiramisuDesktop,
       pictureDesc: "A Classic Tiramisu",
       quantity: 0,
     },
@@ -56,7 +56,7 @@ function App() {
       title: "Pistachio Baklava",
       price: "$4.00",
       category: "Baklava",
-      picture:  BaklavaDesktop ,
+      picture: BaklavaDesktop,
       pictureDesc: "A pistachio baklava",
       quantity: 0,
     },
@@ -65,7 +65,7 @@ function App() {
       title: "Lemon Meringue Pie",
       price: "$4.00",
       category: "Pie",
-      picture:  PieDesktop ,
+      picture: PieDesktop,
       pictureDesc: "A  Lemon Meringue Pie",
       quantity: 0,
     },
@@ -74,7 +74,7 @@ function App() {
       title: "Red Velvet Cake",
       price: "$4.00",
       category: "Cake",
-      picture: CakeDesktop ,
+      picture: CakeDesktop,
       pictureDesc: "A Cake",
       quantity: 0,
     },
@@ -83,7 +83,7 @@ function App() {
       title: "Salted Caramel Brownie",
       price: "$4.50",
       category: "Brownie",
-      picture:  BrownieDesktop ,
+      picture: BrownieDesktop,
       pictureDesc: "A Salted Caramel Brownie",
       quantity: 0,
     },
@@ -92,11 +92,13 @@ function App() {
       title: "Vanilla Panna Cotta",
       price: "$4.00",
       category: "Panna cotta",
-      picture:  PannaDesktop ,
+      picture: PannaDesktop,
       pictureDesc: "A Vanilla Panna Cotta",
       quantity: 0,
     },
   ]);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const setQuantity = (id, quantity) => {
     setProducts((prevProducts) =>
@@ -107,7 +109,15 @@ function App() {
   };
 
   const removeItem = (id) => {
-    setProducts(products.filter(product => product.id !== id));
+    setProducts(products.filter((product) => product.id !== id));
+  };
+
+  const confirmOrder = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -124,18 +134,24 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col p-10">
-        <div className="pt-10">
-          <div>
-            <Cart products={products} setQuantity={setQuantity} removeItem={removeItem} />
+          <div className="pt-10">
+            <div>
+              <Cart
+                products={products}
+                setQuantity={setQuantity}
+                removeItem={removeItem}
+              />
+            </div>
           </div>
-        </div>
-        <div>
-          <div>
-            <Confirmation products={products} setQuantity={setQuantity} removeItem={removeItem} />
-          </div>
-        </div>
         </div>
       </div>
+      <Confirmation
+        products={products}
+        setQuantity={setQuantity}
+        removeItem={removeItem}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </>
   );
 }
