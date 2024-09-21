@@ -1,21 +1,26 @@
 import React from "react";
 import emptyCart from "../assets/illustration-empty-cart.svg";
 import CartCard from "./CartCard";
+import CarbonNeutral from "../assets/icon-carbon-neutral.svg";
 
 const Cart = ({ products, setQuantity, removeItem }) => {
   const totalQuantity = products.reduce((acc, product) => {
     return acc + product.quantity;
   }, 0);
 
-  const totalPrice = products.reduce((acc, product) => {
-    const priceWithoutDollarSign = product.price.replace('$', '');
-    const parsedPrice = parseFloat(priceWithoutDollarSign);
-    if (isNaN(parsedPrice)) {
-      console.error(`Invalid price for product ${product.title}: ${product.price}`);
-      return acc;
-    }
-    return acc + parsedPrice * product.quantity;
-  }, 0).toFixed(2);
+  const totalPrice = products
+    .reduce((acc, product) => {
+      const priceWithoutDollarSign = product.price.replace("$", "");
+      const parsedPrice = parseFloat(priceWithoutDollarSign);
+      if (isNaN(parsedPrice)) {
+        console.error(
+          `Invalid price for product ${product.title}: ${product.price}`
+        );
+        return acc;
+      }
+      return acc + parsedPrice * product.quantity;
+    }, 0)
+    .toFixed(2);
 
   return (
     <div className="bg-white rounded-lg p-10">
@@ -33,7 +38,7 @@ const Cart = ({ products, setQuantity, removeItem }) => {
       ) : (
         <div className="flex flex-col pt-10 ">
           <div>
-          {products.map((product) => (
+            {products.map((product) => (
               <CartCard
                 key={product.id}
                 title={product.title}
@@ -46,7 +51,15 @@ const Cart = ({ products, setQuantity, removeItem }) => {
           </div>
           <div className="flex flex-row justify-between items-center">
             <p className="text-rose-300 text-md font-bold">Order Total</p>
-            <p className="font-bold text-black text-lg">{totalPrice}</p>
+            <p className="font-bold text-black text-lg">$ {totalPrice}</p>
+          </div>
+          <div className="bg-rose-50 rounded-lg flex flex-row justify-center items-center px-2 py-2 text-gray mt-4">
+            <img src={CarbonNeutral} alt="Carbon Neutral" />
+            <div className="flex flex-row justify-center space-x-1">
+              <p>This is a</p>
+              <p className="font-bold">carbon-neutral</p>
+              <p>delivery</p>
+            </div>
           </div>
         </div>
       )}
