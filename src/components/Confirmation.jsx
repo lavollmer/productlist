@@ -55,7 +55,7 @@ const Confirmation = ({ isOpen, onClose, products, confirmOrder }) => {
         <div className="flex flex-row items-center justify-center mt-6">
           <button
             className="flex flex-row items-center justify-center py-4 px-16 rounded-full bg-red"
-            onClick={onClose}
+            onClick={() => window.location.reload()}
           >
             <p className="font-bold text-rose-50">Start New Order</p>
           </button>
