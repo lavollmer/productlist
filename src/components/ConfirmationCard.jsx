@@ -1,7 +1,6 @@
 import React from "react";
 
-const ConfirmationCard = ({ title, price, quantity }) => {
-  //component returns nothing if quantity is less than or equal to 0
+const ConfirmationCard = ({ title, price, quantity, total }) => {
   if (quantity <= 0) {
     return null;
   }
@@ -10,14 +9,13 @@ const ConfirmationCard = ({ title, price, quantity }) => {
   console.log("Quantity:", quantity);
 
   // Remove dollar sign and ensure price is a valid number
-  const priceWithoutDollarSign = price.replace("$", "");
+  const priceWithoutDollarSign = price.replace('$', '');
   const parsedPrice = parseFloat(priceWithoutDollarSign);
   console.log("Parsed Price:", parsedPrice);
 
-  const total = isNaN(parsedPrice)
-    ? "Invalid price"
-    : `$${(parsedPrice * quantity).toFixed(2)}`;
-  console.log("Total:", total);
+  const calculatedTotal = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
+  console.log("Total:", calculatedTotal);
+
 
   return (
     <div className="flex flex-col font-redhat bg-rose-50 p-10">
@@ -30,7 +28,7 @@ const ConfirmationCard = ({ title, price, quantity }) => {
           <p className="text-rose-300">
             @ ${isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}
           </p>
-          <p className="text-red font-bold">{total}</p>
+          <p className="text-red font-bold">{calculatedTotal}</p>
         </div>
         <hr className="border-rose-100 my-5" />
       </div>
