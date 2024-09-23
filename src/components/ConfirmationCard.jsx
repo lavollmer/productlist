@@ -1,6 +1,6 @@
 import React from "react";
 
-const ConfirmationCard = ({ title, price, quantity, total }) => {
+const ConfirmationCard = ({ title, price, quantity }) => {
   if (quantity <= 0) {
     return null;
   }
@@ -9,13 +9,14 @@ const ConfirmationCard = ({ title, price, quantity, total }) => {
   console.log("Quantity:", quantity);
 
   // Remove dollar sign and ensure price is a valid number
-  const priceWithoutDollarSign = price.replace('$', '');
+  const priceWithoutDollarSign = price.replace("$", "");
   const parsedPrice = parseFloat(priceWithoutDollarSign);
   console.log("Parsed Price:", parsedPrice);
 
-  const calculatedTotal = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
+  const calculatedTotal = isNaN(parsedPrice)
+    ? "Invalid price"
+    : `$${(parsedPrice * quantity).toFixed(2)}`;
   console.log("Total:", calculatedTotal);
-
 
   return (
     <div className="flex flex-col font-redhat bg-rose-50 p-10">
