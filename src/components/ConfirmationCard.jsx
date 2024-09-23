@@ -1,4 +1,13 @@
 import React from "react";
+import BaklavaSmall from "../assets/image-baklava-thumbnail.jpg";
+import BrownieSmall from "../assets/image-brownie-thumbnail.jpg";
+import CakeSmall from "../assets/image-cake-thumbnail.jpg";
+import CremeBruleeSmall from "../assets/image-creme-brulee-thumbnail.jpg";
+import MacaronSmall from "../assets/image-macaron-thumbnail.jpg";
+import MeringueSmall from "../assets/image-meringue-thumbnail.jpg";
+import PannaCottaSmall from "../assets/image-panna-cotta-thumbnail.jpg";
+import TiramisuSmall from "../assets/image-tiramisu-thumbnail.jpg";
+import WaffleSmall from "../assets/image-waffle-thumbnail.jpg";
 
 const ConfirmationCard = ({ title, price, quantity }) => {
   if (quantity <= 0) {
@@ -19,7 +28,7 @@ const ConfirmationCard = ({ title, price, quantity }) => {
   console.log("Total:", calculatedTotal);
 
   return (
-    <div className="flex flex-col font-redhat bg-rose-50 p-10">
+    <div className="flex flex-col font-redhat bg-rose-50 p-4">
       <div className="flex flex-col justify-start">
         <div className="flex flex-row justify-between">
           <h1 className="font-bold text-md">{title}</h1>
