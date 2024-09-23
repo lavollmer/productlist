@@ -38,7 +38,16 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     Waffle: WaffleSmall,
   };
 
-  const normalizedTitle = title.replace("Pistachio ", ""); // Normalize the title
+    // Function to normalize the title
+    const normalizeTitle = (title) => {
+      let normalizedTitle = title;
+      normalizedTitle = normalizedTitle.replace("Pistachio ", "");
+      normalizedTitle = normalizedTitle.replace("Creme Brulee", "Creme Brulee");
+      normalizedTitle = normalizedTitle.replace("Panna Cotta", "Panna Cotta");
+      return normalizedTitle;
+    };
+
+    const normalizedTitle = normalizeTitle(title);
   const thumbnailImage = thumbnailMapping[normalizedTitle] || null;
   console.log("Thumbnail Image:", thumbnailImage);
 
