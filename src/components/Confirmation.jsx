@@ -54,10 +54,10 @@ const Confirmation = ({ isOpen, products }) => {
         </div>
         <div className="flex flex-row items-center justify-center mt-6">
           <button
-            className="flex flex-row items-center justify-center py-4 px-16 rounded-full bg-red"
+            className="bg-red flex flex-row items-center justify-center w-full font-bold text-rose-50 py-4 rounded-full hover:bg-black focus:bg-black focus:outline-none"
             onClick={() => window.location.reload()}
           >
-            <p className="font-bold text-rose-50">Start New Order</p>
+            Start New Order
           </button>
         </div>
       </div>

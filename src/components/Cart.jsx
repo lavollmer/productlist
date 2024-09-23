@@ -38,7 +38,7 @@ const Cart = ({ products, setQuantity, removeItem, confirmOrder }) => {
       ) : (
         <div className="flex flex-col pt-10 ">
           <div>
-          {products.map((product, index) => (
+            {products.map((product, index) => (
               <CartCard
                 key={`${product.id}-${index}`}
                 title={product.title}
@@ -62,8 +62,11 @@ const Cart = ({ products, setQuantity, removeItem, confirmOrder }) => {
             </div>
           </div>
           <div className="flex flex-row justify-center items-center mt-4">
-            <button className="bg-red flex flex-row items-center justify-center w-full py-4 rounded-full" onClick={confirmOrder}>
-              <p className="font-bold text-rose-50 bg-red">Confirm Order</p>
+            <button
+              className="bg-red flex flex-row items-center justify-center w-full font-bold text-rose-50 py-4 rounded-full hover:bg-black focus:bg-black focus:outline-none"
+              onClick={confirmOrder}
+            >
+              Confirm Order
             </button>
           </div>
         </div>
