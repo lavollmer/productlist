@@ -88,7 +88,7 @@ function App() {
       quantity: 0,
     },
     {
-      id: 6,
+      id: 9,
       title: "Vanilla Panna Cotta",
       price: "$4.00",
       category: "Panna cotta",
