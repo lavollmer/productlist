@@ -18,6 +18,16 @@ const CartCard = ({ title, price, quantity, removeItem }) => {
   const total = isNaN(parsedPrice) ? "Invalid price" : `$${(parsedPrice * quantity).toFixed(2)}`;
   console.log("Total:", total);
 
+  const handleAddQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleSubtractQuantity = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div className="flex flex-col font-redhat bg-white p-2">
       <div className="flex flex-col justify-start bg-white">

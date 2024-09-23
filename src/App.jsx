@@ -101,14 +101,18 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const setQuantity = (id, quantity) => {
-    setProducts(products.map(product => 
-      product.id === id ? { ...product, quantity } : product
-    ));
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === id ? { ...product, quantity } : product
+      )
+    );
   };
 
   const removeItem = (id) => {
     setProducts((prevProducts) =>
-      prevProducts.filter((product) => product.id !== id)
+      prevProducts.map((product) =>
+        product.id === id ? { ...product, quantity: 0 } : product
+      )
     );
   };
 
