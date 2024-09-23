@@ -107,7 +107,9 @@ function App() {
   };
 
   const removeItem = (id) => {
-    setProducts(products.filter((product) => product.id !== id));
+    setProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== id)
+    );
   };
 
   const confirmOrder = () => {
