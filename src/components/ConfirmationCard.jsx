@@ -38,22 +38,31 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     Waffle: WaffleSmall,
   };
 
- // Function to normalize the title
- const normalizeTitle = (title) => {
-  let normalizedTitle = title;
-  normalizedTitle = normalizedTitle.replace("Pistachio ", "");
-  normalizedTitle = normalizedTitle.replace("Salted Caramel Brownie", "Brownie");
-  normalizedTitle = normalizedTitle.replace("Red Velvet Cake", "Cake");
-  normalizedTitle = normalizedTitle.replace("Lemon Meringue Pie", "Meringue");
-  normalizedTitle = normalizedTitle.replace("Classic Tiramisu", "Tiramisu");
-  normalizedTitle = normalizedTitle.replace("Macaron Mix of Five", "Macaron");
-  normalizedTitle = normalizedTitle.replace("Waffle with Berries", "Waffle");
-  normalizedTitle = normalizedTitle.replace("Vanilla Bean Crème Brûlée", "Creme Brulee");
-  normalizedTitle = normalizedTitle.replace("Vanilla Panna Cotta", "Panna Cotta");
-  return normalizedTitle;
-};
+  // Function to normalize the title
+  const normalizeTitle = (title) => {
+    let normalizedTitle = title;
+    normalizedTitle = normalizedTitle.replace("Pistachio ", "");
+    normalizedTitle = normalizedTitle.replace(
+      "Salted Caramel Brownie",
+      "Brownie"
+    );
+    normalizedTitle = normalizedTitle.replace("Red Velvet Cake", "Cake");
+    normalizedTitle = normalizedTitle.replace("Lemon Meringue Pie", "Meringue");
+    normalizedTitle = normalizedTitle.replace("Classic Tiramisu", "Tiramisu");
+    normalizedTitle = normalizedTitle.replace("Macaron Mix of Five", "Macaron");
+    normalizedTitle = normalizedTitle.replace("Waffle with Berries", "Waffle");
+    normalizedTitle = normalizedTitle.replace(
+      "Vanilla Bean Crème Brûlée",
+      "Creme Brulee"
+    );
+    normalizedTitle = normalizedTitle.replace(
+      "Vanilla Panna Cotta",
+      "Panna Cotta"
+    );
+    return normalizedTitle;
+  };
 
-    const normalizedTitle = normalizeTitle(title);
+  const normalizedTitle = normalizeTitle(title);
   const thumbnailImage = thumbnailMapping[normalizedTitle] || null;
   console.log("Thumbnail Image:", thumbnailImage);
 
@@ -63,32 +72,35 @@ const ConfirmationCard = ({ title, price, quantity }) => {
   console.log("Thumbnail:", thumbnailMapping[title]);
 
   return (
-    <div className="flex flex-row font-redhat bg-rose-50 p-4 space-x-10">
-      <div className="flex flex-row">
-        {thumbnailImage && (
-          <img src={thumbnailImage} alt={title} className="h-16 w-16" />
-        )}
-      </div>
-      <div className="flex flex-col justify-start">
-        <div className="flex flex-row justify-between">
-          <h1 className="font-bold text-md">{title}</h1>
+    <div className="flex flex-row items-center font-redhat bg-rose-50 p-4">
+      <div className="flex flex-row items-center justify-between w-full">
+        <div className="flex flex-row items-center">
+          {thumbnailImage && (
+            <img src={thumbnailImage} alt={title} className="h-16 w-16" />
+          )}
         </div>
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-row items-center justify-between space-x-4 text-sm">
-            <div className="flex flex-row space-x-4">
-              <p className="text-red font-bold">{quantity}x</p>
-              <p className="text-rose-300">
-                @ $
-                {isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}
-              </p>
+        <div className="flex flex-col ml-4">
+          <h1 className="font-bold text-md">{title}</h1>
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row items-center justify-between space-x-4 text-sm">
+              <div className="flex flex-row space-x-4">
+                <p className="text-red font-bold">{quantity}x</p>
+                <p className="text-rose-300">
+                  @ $
+                  {isNaN(parsedPrice)
+                    ? "Invalid price"
+                    : parsedPrice.toFixed(2)}
+                </p>
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-black font-bold">{calculatedTotal}</p>
-          </div>
         </div>
+        <div className="ml-auto">
+          <p className="text-black font-bold">{calculatedTotal}</p>
+        </div>
+        <hr className="border-rose-100 my-5" />
       </div>
-      <hr className="border-rose-100 my-5" />
+      
     </div>
   );
 };
