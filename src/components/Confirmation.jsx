@@ -43,17 +43,16 @@ const Confirmation = ({ isOpen, onClose, products, confirmOrder }) => {
                 price={product.price}
                 quantity={product.quantity}
                 setQuantity={(quantity) => setQuantity(product.id, quantity)}
-                removeItem={() => removeItem(product.id)}
-                total={totalPrice} // Pass total price as a prop
+                total={totalPrice}
               />
             ))}
           </div>
-          <div className="flex flex-row justify-between mt-6 p-10">
-            <p className="font-bold text-md">Order Price:</p>
-            <p className="font-bold text-black text-lg">${totalPrice}</p>
+          <div className="flex flex-row justify-between items-center p-6">
+            <p className="font-bold text-md text-rose-300">Order Price:</p>
+            <p className="font-bold text-black text-xl">${totalPrice}</p>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-center">
+        <div className="flex flex-row items-center justify-center mt-6">
           <button
             className="flex flex-row items-center justify-center py-4 px-16 rounded-full bg-red"
             onClick={onClose}
