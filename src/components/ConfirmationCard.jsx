@@ -24,12 +24,19 @@ const ConfirmationCard = ({ title, price, quantity }) => {
         <div className="flex flex-row justify-between">
           <h1 className="font-bold text-md">{title}</h1>
         </div>
-        <div className="flex flex-row space-x-4 text-sm">
-          <p className="text-red font-bold">{quantity}x</p>
-          <p className="text-rose-300">
-            @ ${isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}
-          </p>
-          <p className="text-red font-bold">{calculatedTotal}</p>
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row items-center justify-between space-x-4 text-sm">
+            <div className="flex flex-row space-x-4">
+              <p className="text-red font-bold">{quantity}x</p>
+              <p className="text-rose-300">
+                @ $
+                {isNaN(parsedPrice) ? "Invalid price" : parsedPrice.toFixed(2)}
+              </p>
+            </div>
+          </div>
+          <div>
+            <p className="text-black font-bold">{calculatedTotal}</p>
+          </div>
         </div>
         <hr className="border-rose-100 my-5" />
       </div>
