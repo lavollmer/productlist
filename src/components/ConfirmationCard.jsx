@@ -14,9 +14,6 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     return null;
   }
 
-  console.log("Price:", price);
-  console.log("Quantity:", quantity);
-
   // Remove dollar sign and ensure price is a valid number
   const priceWithoutDollarSign = price.replace("$", "");
   const parsedPrice = parseFloat(priceWithoutDollarSign);
@@ -27,8 +24,36 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     : `$${(parsedPrice * quantity).toFixed(2)}`;
   console.log("Total:", calculatedTotal);
 
+  // Mapping of product titles to thumbnail images
+  const thumbnailMapping = {
+    Baklava: BaklavaSmall,
+    "Pistachio Baklava": BaklavaSmall,
+    Brownie: BrownieSmall,
+    Cake: CakeSmall,
+    "Creme Brulee": CremeBruleeSmall,
+    Macaron: MacaronSmall,
+    Meringue: MeringueSmall,
+    "Panna Cotta": PannaCottaSmall,
+    Tiramisu: TiramisuSmall,
+    Waffle: WaffleSmall,
+  };
+
+  const normalizedTitle = title.replace("Pistachio ", ""); // Normalize the title
+  const thumbnailImage = thumbnailMapping[normalizedTitle] || null;
+  console.log("Thumbnail Image:", thumbnailImage);
+
+  console.log("Price:", price);
+  console.log("Quantity:", quantity);
+  console.log("Title:", title);
+  console.log("Thumbnail:", thumbnailMapping[title]);
+
   return (
-    <div className="flex flex-col font-redhat bg-rose-50 p-4">
+    <div className="flex flex-row font-redhat bg-rose-50 p-4 space-x-10">
+      <div className="flex flex-row">
+        {thumbnailImage && (
+          <img src={thumbnailImage} alt={title} className="h-16 w-16" />
+        )}
+      </div>
       <div className="flex flex-col justify-start">
         <div className="flex flex-row justify-between">
           <h1 className="font-bold text-md">{title}</h1>
@@ -47,8 +72,8 @@ const ConfirmationCard = ({ title, price, quantity }) => {
             <p className="text-black font-bold">{calculatedTotal}</p>
           </div>
         </div>
-        <hr className="border-rose-100 my-5" />
       </div>
+      <hr className="border-rose-100 my-5" />
     </div>
   );
 };

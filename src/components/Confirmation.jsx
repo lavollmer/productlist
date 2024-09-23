@@ -2,7 +2,7 @@ import React from "react";
 import GreenIcon from "../assets/icon-order-confirmed.svg";
 import ConfirmationCard from "./ConfirmationCard";
 
-const Confirmation = ({ isOpen, onClose, products, confirmOrder }) => {
+const Confirmation = ({ isOpen, products }) => {
   if (!isOpen) return null;
 
   // Calculate the total price of all items
