@@ -14,7 +14,6 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     return null;
   }
 
-  // Remove dollar sign and ensure price is a valid number
   const priceWithoutDollarSign = price.replace("$", "");
   const parsedPrice = parseFloat(priceWithoutDollarSign);
   console.log("Parsed Price:", parsedPrice);
@@ -24,7 +23,6 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     : `$${(parsedPrice * quantity).toFixed(2)}`;
   console.log("Total:", calculatedTotal);
 
-  // Mapping of product titles to thumbnail images
   const thumbnailMapping = {
     Baklava: BaklavaSmall,
     "Pistachio Baklava": BaklavaSmall,
@@ -38,7 +36,6 @@ const ConfirmationCard = ({ title, price, quantity }) => {
     Waffle: WaffleSmall,
   };
 
-  // Function to normalize the title
   const normalizeTitle = (title) => {
     let normalizedTitle = title;
     normalizedTitle = normalizedTitle.replace("Pistachio ", "");
