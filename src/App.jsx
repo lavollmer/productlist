@@ -128,7 +128,7 @@ function App() {
     <>
       <div className="flex md:flex-row flex-col bg-rose-50 p-4 md:p-10 md:space-x-20 w-full">
         <div className="flex flex-col p-10">
-          <div className="flex flex-row items-center justify-center">
+          <div>
             <h1 className="font-redhat text-black font-bold text-4xl">
               Desserts
             </h1>

@@ -1,6 +1,6 @@
 # Product List with Cart Website Laura Dev
 
-This project involved working on a product list and cart functionality with ReactJS, Vite and TailwindCSS. Throughout the process, I worked on various key features such a cart functionality component, order confirmation, a add to cart function with correct quantities and much more.
+This project involved working on a product list and cart functionality with ReactJS, Vite and TailwindCSS. Throughout the process, I worked on various key features such a cart functionality component, order confirmation, mobile responsiveness, hover and focus state and  a add to cart function with correct quantities,
 
 ## Table of contents
 
@@ -32,15 +32,13 @@ Your users should be able to:
 <p style="font-size:20px;">Desktop Version:</p>
 
 
-<p style="font-size:20px;">Desktop Version Dark Mode:</p>
-
-
 <p style="font-size:20px;">Mobile Version:</p>
 
 
 ## Links
 
 - Live Site URL: [Dessert Cart Website Laura Dev](https://dessert-cart-lauradev.netlify.app/)
+- Frontend Mentor Solution: [Laura Dev Solution]()
 
 ## My Process
 
@@ -52,7 +50,9 @@ The construction of the desktop layout was the first piece, where I focused on r
 
 I started the development on the count button, add to cart button, and the cart component functionalities. This phase presented challenges as it involved deepening my understanding of props. My first task was to refine the count button, ensuring it accurately responded to both increment (+) and decrement (-) actions as well as the Add To Cart button. Subsequently, I added a cart confirmation section that would populate the number of items, price and total. Integrating the props within the application, especially in terms of passing specific data related to quantities and type of food, was particularly challenging. Through this process, I explored various strategies for managing state, from global to local scopes.
 
-The final touches to the project involved ensuring compliance with the design requirements.  Deploying the project on Netlify was the culmination of my efforts, providing a live website of my work.
+The next section involved getting the confirmation component to function properly. The confirmation component involved using thumbnail images, correct quantities, pricing and total pricing. Additionally, the start new order button should refresh the entire page for a new order with no saved information. I reviewed the requirements of the project to also include hover and focus states which I added to the buttons by changing the color from red to black when selected.
+
+The final touches to the project involved ensuring compliance with the design requirements.  Deploying the project on Netlify was the culmination of my efforts, providing a live website of my work. This project was challenging for me and I look forward to making more of these.
 
 ## Built with
 
@@ -76,17 +76,15 @@ Here are several things I learned throughout this project:
 2. **_Props_** - I reviewed my understanding of passing props and continued to grow upon my knowledge. I wanted to pass the quantity as a prop to the App component as well as the Cart component. Additionally, I learned more about declaring variables while passing it as props - the quantity could not be declared more than once in the same scope.
 3. **_Grid Container_** - I wanted the products to display in a 3x3 grid on desktop screens, so I was able to use CSS Grid. I used the utility classes provided by Tailwind and updated the container div with responsive behavior.
 
-
 ## Continued development
 
 I will continue to learn more about TailwindCSS, ReactJS and updating my process of building a website. I will continue creating original projects, frontend mentor challenges and much more.
 
-My next goal with this project is to change the domain from my old portfolio website and add it to this new one. Additionally, I want to keep creating more projects to add to this portfolio and also make the website more interactive.
+Additionally, I will add this project to my new portfolio website and submit to Frontend Mentor profile.
 
 ## Useful resources
 
 - [Red Hat Google Font](https://fonts.google.com/specimen/Red+Hat+Text) - Design called for this font in the project.
-
 
 ## Author
 
