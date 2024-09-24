@@ -76,16 +76,16 @@ const ConfirmationCard = ({ title, price, quantity }) => {
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex flex-row items-center">
           {thumbnailImage && (
-            <img src={thumbnailImage} alt={title} className="h-16 w-16" />
+            <img src={thumbnailImage} alt={title} className="md:h-16 md:w-16 h-8 w-8" />
           )}
         </div>
         <div className="flex flex-col ml-4">
-          <h1 className="font-bold text-md">{title}</h1>
+          <h1 className="font-bold text-xs md:text-md">{title}</h1>
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center justify-between space-x-4 text-sm">
               <div className="flex flex-row space-x-4">
                 <p className="text-red font-bold">{quantity}x</p>
-                <p className="text-rose-300">
+                <p className="text-rose-300 text-sm md:text-md">
                   @ $
                   {isNaN(parsedPrice)
                     ? "Invalid price"

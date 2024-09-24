@@ -22,11 +22,11 @@ const Confirmation = ({ isOpen, products }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="flex flex-col bg-white rounded-lg p-10 space-y-10 w-1/2 max-2-xl ">
+      <div className="flex flex-col bg-white rounded-lg md:p-10 p-4 space-y-10 md:w-1/2 w-3/4 max-2-xl ">
         <div className="flex flex-col space-y-4">
           <img src={GreenIcon} alt="green checkmark" className="h-10 w-10" />
           <div>
-            <h1 className="font-redhat text-black font-bold text-4xl">
+            <h1 className="font-redhat text-black font-bold text-2xl md:text-4xl">
               Order Confirmed
             </h1>
             <h2 className="font-redhat text-rose-300 text-sm">
