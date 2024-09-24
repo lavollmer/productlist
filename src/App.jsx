@@ -126,9 +126,9 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-row bg-rose-50 p-10 space-x-20 w-full">
+      <div className="flex md:flex-row flex-col bg-rose-50 p-4 md:p-10 md:space-x-20 w-full">
         <div className="flex flex-col p-10">
-          <div>
+          <div className="flex flex-row items-center justify-center">
             <h1 className="font-redhat text-black font-bold text-4xl">
               Desserts
             </h1>
@@ -137,7 +137,7 @@ function App() {
             <Product products={products} setQuantity={setQuantity} />
           </div>
         </div>
-        <div className="flex flex-col p-10">
+        <div className="flex flex-col md:p-10">
           <div className="pt-10">
             <div>
               <Cart

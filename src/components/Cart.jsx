@@ -55,7 +55,7 @@ const Cart = ({ products, setQuantity, removeItem, confirmOrder }) => {
           </div>
           <div className="bg-rose-50 rounded-lg flex flex-row justify-center items-center px-2 py-2 text-gray mt-4">
             <img src={CarbonNeutral} alt="Carbon Neutral" />
-            <div className="flex flex-row justify-center space-x-1">
+            <div className="flex flex-row justify-center space-x-1 md:text-md text-sm">
               <p>This is a</p>
               <p className="font-bold">carbon-neutral</p>
               <p>delivery</p>
