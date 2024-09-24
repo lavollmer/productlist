@@ -55,7 +55,7 @@ Users should be able to:
 ## Links
 
 - Live Site URL: [Dessert Cart Website Laura Dev](https://dessert-cart-lauradev.netlify.app/)
-- Frontend Mentor Solution: [Laura Dev Solution]()
+- Frontend Mentor Solution: [Laura Dev Solution](https://www.frontendmentor.io/solutions/responsive-react-tailwindcss-vite-product-cart-list-_O9STNU2QP)
 
 ## My Process
 
