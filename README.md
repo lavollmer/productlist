@@ -1,6 +1,6 @@
 # Product List with Cart Website Laura Dev
 
-This project involved working on a product list and cart functionality with ReactJS, Vite and TailwindCSS. Throughout the process, I worked on various key features such a cart functionality component, order confirmation, mobile responsiveness, hover and focus state and  a add to cart function with correct quantities,
+This project involved working on a dessert ordering website and cart functionality with ReactJS, Vite and TailwindCSS. Throughout the process, I worked on various key features such a cart functionality component, order confirmation, mobile responsiveness, hover and focus state and  a add to cart function with correct quantities,
 
 ## Table of contents
 
@@ -18,7 +18,7 @@ This project involved working on a product list and cart functionality with Reac
 
 The overall vision of the project was to build out this product list project that includes a functional cart and get it looking as close to the design as possible.
 
-Your users should be able to:
+Users should be able to:
 - Add items to the cart and remove them
 - Increase/decrease the number of items in the cart
 - See an order confirmation modal when they click "Confirm Order"
@@ -31,8 +31,25 @@ Your users should be able to:
 
 <p style="font-size:20px;">Desktop Version:</p>
 
+![Desktop Landing Page](./src/assets/desktop_main.png)
+
+![Desktop Cart Functionality](./src/assets/desktop_cart.png)
+
+![Desktop Confirmation Order Functionality](./src/assets/desktop_confirmation.png)
+
 
 <p style="font-size:20px;">Mobile Version:</p>
+
+![Mobile Landing Page](./src/assets/mobile_main.png)
+
+![Mobile Cart Functionality](./src/assets/mobile_cart.png)
+
+![Mobile Confirmation Order Functionality](./src/assets/mobile_confirmation.png)
+
+
+<p style="font-size:20px;">Lighthouse Report:</p>
+
+![Lighthouse Report](./src/assets/lighthousereport.png)
 
 
 ## Links
